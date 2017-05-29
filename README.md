@@ -1,3 +1,20 @@
+Please add the patch link
+extra version
+Upload kernel.tar.gz
+change tgz to tar.gz ( 4.9.. ) 
+
+Para1 Compile the kernel
+
+Para2: Installtion of the kernel - download raspbian img from a website and then burn into the sd card and then untar the kernel.tar.gz into the root folder to get the newest compiled kernel.
+The kernel image in Rasberry 3 is always known as kernel7.img and is not changeable, because it is dependant on the dtbs modules that are built along durin the compilation stage.
+
+Upload helikopter SD card image.
+
+Upload the config file and System.map 
+
+
+
+
 # Kernel Compiling
 Here you can find the raspberry kernel source code and following is reported the guide about how to compile it.
 
@@ -91,7 +108,7 @@ In the menu of the configuration file, modify the following parameters:
 	Compress all the generated files and copy them into the raspberry
 	```
 	cd $INSTALL_MOD_PATH
-	tar czf kernel.tgz *
+	tar czf kernel.tgz *  
 	scp kernel.tgz pi@raspberry:/tmp
 	```
 
