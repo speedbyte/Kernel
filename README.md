@@ -1,7 +1,8 @@
-% Upload kernel.tar.gz
-% The kernel image in Rasberry 3 is always known as kernel7.img and is not changeable, because it is dependant on the dtbs modules that are built along durin the compilation stage.
-% Upload helikopter SD card image.
-% Upload the config file and System.map 
+Upload kernel.tar.gz
+
+Upload helikopter SD card image.
+
+Upload the config file and System.map 
 
 # Kernel Compiling
 Here you can find the raspberry kernel source code and following is reported the guide about how to compile it.
@@ -53,6 +54,7 @@ user@host ~ wget -P ~/linux/ https://www.kernel.org/pub/linux/kernel/projects/rt
 	user@host ~$ cd ${RPATH_LINUX}
 	user@host ~/linux$ mkdir ../kernel
 	```
+	The kernel image in Rasberry 3 is always known as kernel7.img and is not changeable, because it is dependant on the dtbs modules that are built along durin the compilation stage.
 
 3. Install the patch for the RealTime Kernel
 	```
@@ -72,13 +74,11 @@ user@host ~ wget -P ~/linux/ https://www.kernel.org/pub/linux/kernel/projects/rt
 	user@host ~/linux$ make menuconfig
 	```
 
-5. During the configuration of the kernel we need to define a couple of parameters in order to get the Fully Preemptible Kernel, in case you used the already provided kernel, just check if they were correctly set
-
-In the menu of the configuration file, be sure the following parameters are set:
-    ```
-	CONFIG_PREEMPT_RT_FULL: Kernel Features → Preemption Model (Fully Preemptible Kernel (RT)) → Fully Preemptible Kernel (RT)
-	Enable HIGH_RES_TIMERS: General setup → Timers subsystem → High Resolution Timer Support (Actually, this should already be enabled in the standard configuration.)
-	```
+5. During the configuration of the kernel we need to define a couple of parameters in order to get the Fully Preemptible Kernel, in case you used the already provided kernel, just check if they were correctly set. In the menu of the configuration file, be sure the following parameters are set:
+        ```
+        CONFIG_PREEMPT_RT_FULL: Kernel Features → Preemption Model (Fully Preemptible Kernel (RT)) → Fully Preemptible Kernel (RT)
+        Enable HIGH_RES_TIMERS: General setup → Timers subsystem → High Resolution Timer Support
+        ```
 6. We can give a custom name to our kernel (visible then using the "uname -a" command after we installed the kernel) modifying in the MakeFile inside the linux source folder the parameter "EXTRAVERSION". Please pay attention to not insert empty spaces in the name.
 
 7. Now we can compile the kernel, generate the modules and the data tree files and install the modules in the directory we defined before in the INSTALL_MOD_PATH variable
@@ -122,11 +122,12 @@ If you are using the files provided just skip to the point #4, otherwise if you 
 
 9. Reboot your raspberry and you will have the new kernel installed
 
-## Starting from Raspbian
+## starting from Raspbian
 1. Download the image of the Rasbian OS
     ```
     user@host wget https://downloads.raspberrypi.org/raspbian/images/raspbian-2017-04-10/2017-04-10-raspbian-jessie.zip
     ```
+    
 2. Copy the image in the SD card. First of all we need to discover the mounting point if the SD card using the command:
     ```
     user@host df -h
