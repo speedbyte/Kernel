@@ -1,10 +1,7 @@
-Upload kernel.tar.gz
-
-%The kernel image in Rasberry 3 is always known as kernel7.img and is not changeable, because it is dependant on the dtbs modules that are built along durin the compilation stage.
-
-Upload helikopter SD card image.
-
-Upload the config file and System.map 
+% Upload kernel.tar.gz
+% The kernel image in Rasberry 3 is always known as kernel7.img and is not changeable, because it is dependant on the dtbs modules that are built along durin the compilation stage.
+% Upload helikopter SD card image.
+% Upload the config file and System.map 
 
 # Kernel Compiling
 Here you can find the raspberry kernel source code and following is reported the guide about how to compile it.
