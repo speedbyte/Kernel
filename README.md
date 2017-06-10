@@ -140,7 +140,7 @@ If you are using the files provided just skip to the point #4, otherwise if you 
     ```
     user@host dd bs=4M if=2017-04-10-raspbian-jessie.img of=/dev/sdX
     ```
-3. Copy the compressed file kernelAndModules-RT-4.9 into the raspberry
+3. Copy the compressed file kernelAndModules-RT-4.9.tar.gz into the raspberry
     ```
 	user@host scp kernelAndModules-RT-4.9 pi@raspberry:/tmp
 	```
