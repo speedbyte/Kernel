@@ -1,8 +1,4 @@
-Upload kernel.tar.gz
-
 Upload helikopter SD card image.
-
-Upload the config file and System.map 
 
 # Kernel Compiling
 Here you can find the raspberry kernel source code and following is reported the guide about how to compile it.
@@ -142,7 +138,7 @@ If you are using the files provided just skip to the point #4, otherwise if you 
     ```
 3. Copy the compressed file kernelAndModules-RT-4.9.tar.gz into the raspberry
     ```
-	user@host scp kernelAndModules-RT-4.9 pi@raspberry:/tmp
+	user@host scp kernelAndModules-RT-4.9.tar.gz pi@raspberry:/tmp
 	```
 4. Finally from the raspberry we need to decompress the tarball to install the new kernel
 	```
